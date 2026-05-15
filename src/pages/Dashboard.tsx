@@ -53,7 +53,11 @@ export default function Dashboard({ navigate }: { navigate: (p: Page) => void })
   }, [selectedMood]);
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 relative">
+      {/* Decorative Gradient Background */}
+      <div className="absolute -top-24 -left-24 w-64 h-64 bg-brand-sage/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 -right-24 w-64 h-64 bg-brand-mint/10 rounded-full blur-3xl -z-10" />
+      
       <section>
         <h2 className="text-3xl font-bold text-brand-heading">Good morning, Cyrina.</h2>
         <p className="text-brand-muted mt-1 font-medium">How are you feeling today?</p>
