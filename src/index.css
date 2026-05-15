@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-sage: #A8D5BA;
+  --color-brand-sage-dark: #4B635A;
+  --color-brand-mint: #C2E9D9;
+  --color-brand-cream: #F4F7F5;
+  --color-brand-border: #E8F0EA;
+  --color-brand-text: #3D4B44;
+  --color-brand-heading: #2D3A35;
+  --color-brand-muted: #8DA698;
+  
+  /* Mood Colors */
+  --color-mood-happy: #F3E8FF;
+  --color-mood-calm: #E9F5EB;
+  --color-mood-anxious: #E1F5FE;
+  --color-mood-sad: #FFF4E5;
+  --color-mood-stressed: #F5F5F5;
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
+}
+
+body {
+  @apply bg-brand-cream text-brand-text antialiased font-sans;
+}
+
+.safe-card {
+  @apply bg-white rounded-[2.5rem] shadow-sm border border-brand-border p-8 transition-all duration-300;
+}
+
+.safe-card:hover {
+  @apply shadow-md transform -translate-y-0.5;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-brand-sage text-white rounded-full font-bold shadow-md hover:shadow-lg transition-all active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-white border border-brand-border text-brand-text rounded-full font-semibold shadow-sm hover:shadow-md transition-all active:scale-95;
+}
+
+.btn-ghost {
+  @apply px-6 py-3 text-brand-muted rounded-full font-medium hover:bg-white transition-all;
+}
